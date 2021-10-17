@@ -1,7 +1,7 @@
 package tests;
 
-import tests.models.PlanType;
-import tests.models.User;
+import logic.models.PlanType;
+import logic.models.User;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

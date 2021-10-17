@@ -1,7 +1,7 @@
 package tests;
 
-import tests.helpers.interfaces.ApplicationManagerI;
-import tests.helpers.managers.ApplicationManager;
+import logic.helpers.interfaces.ApplicationManagerI;
+import logic.helpers.managers.ApplicationManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
