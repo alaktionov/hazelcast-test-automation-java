@@ -7,3 +7,5 @@
 /bin
 target/
 /classes
+/.allure/*
+/allure-results

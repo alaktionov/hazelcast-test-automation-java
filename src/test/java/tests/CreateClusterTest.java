@@ -2,6 +2,7 @@ package tests;
 
 import logic.models.PlanType;
 import logic.models.User;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -10,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CreateClusterTest extends BaseTest {
 
     @Test
+    @DisplayName("Verify new free cluster can be successfully created and then deleted")
     public void verifyFreeClusterCanBeSuccessfullyCreatedAndDeleted() {
         // GIVEN
         String email = "oliver.wuhrl@gmail.com";

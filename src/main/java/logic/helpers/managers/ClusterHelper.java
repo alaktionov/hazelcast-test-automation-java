@@ -1,5 +1,6 @@
 package logic.helpers.managers;
 
+import io.qameta.allure.Step;
 import logic.helpers.interfaces.ClusterHelperI;
 import logic.models.PlanType;
 
@@ -9,6 +10,7 @@ public class ClusterHelper extends DriverBasedHelper implements ClusterHelperI {
         super(manager.getWebDriver());
     }
 
+    @Step("User creates a new cluster with a plan: '{0}'")
     @Override
     public void createCluster(PlanType planType) {
         pageManager.homePage.clickNewClusterButton();
@@ -17,6 +19,7 @@ public class ClusterHelper extends DriverBasedHelper implements ClusterHelperI {
         pageManager.confirmationPage.clickContinueCreatingClusterButton();
     }
 
+    @Step("User deletes the previously created plan")
     @Override
     public void deleteCluster() {
         pageManager.clusterDetailsPage.clickDeleteClusterAndConfirm();

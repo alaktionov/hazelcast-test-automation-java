@@ -12,13 +12,24 @@ Source Code : https://github.com/alaktionov/hazelcast-test-automation-java
  * Open the project in your IDE (e.g. Intellij IDEA)
  * Make sure all dependencies are properly downloaded
  * Make sure your Chrome browser has the latest version: **Version 94.0.4606.81**
- * Open terminal at your project directory and run the following maven command which will execute all tests in Chrome driver:
-     ```mvn clean test -P chrome```
-     OR 
-     ```mvn clean test``` (since chrome profile is activated by default)
- * Open generated Allure report and see details of execution
+ * Run tests in one of the following ways:
+    * Run CreateClusterTest.java via IDE interface
+    * Make sure all tests passed
+    * Open allure-results folder and open the latest report
+    
+    OR
+    
+    * Open terminal at your project directory and run the following maven command which will execute all tests in Chrome driver:
+        ```mvn clean test -P chrome allure:serve```
+        OR 
+        ```mvn clean test allure:serve``` (since chrome profile is activated by default)
+    * Make sure all tests passed
+    * Make sure Allure report is generated and opened in the browser
+    * Press <Ctrl+C> to close Allure report
 
 ## Notes
 
  * Used libraries: Java 11, Selenium, JUnit5, Allure
+ * Directory **main** contains all code related to the framework functionality
+ * Directory **test** contains all code related to the tests implementation
  * Tests can be run only in Chrome driver at the moment, i.e. using a command ```mvn clean test -P firefox``` will return IllegalArgumentException 
